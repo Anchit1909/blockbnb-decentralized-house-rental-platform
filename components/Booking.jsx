@@ -3,6 +3,7 @@ import { useAccount } from 'wagmi'
 import { toast } from 'react-toastify'
 import Identicon from 'react-identicons'
 import { formatDate, truncate } from '@/utils/helper'
+import { checkInApartment, refundBooking } from '@/services/blockchain'
 
 const Booking = ({ booking }) => {
   const { address } = useAccount()
@@ -10,12 +11,12 @@ const Booking = ({ booking }) => {
   const handleCheckIn = async () => {
     await toast.promise(
       new Promise(async (resolve, reject) => {
-        // await checkInApartment(booking.aid, booking.id)
-        //   .then(async (tx) => {
-        //     console.log(tx)
-        //     resolve(tx)
-        //   })
-        //   .catch((error) => reject(error))
+        await checkInApartment(booking.aid, booking.id)
+          .then(async (tx) => {
+            console.log(tx)
+            resolve(tx)
+          })
+          .catch((error) => reject(error))
       }),
       {
         pending: 'Approve transaction...',
@@ -28,11 +29,11 @@ const Booking = ({ booking }) => {
   const handleRefund = async () => {
     await toast.promise(
       new Promise(async (resolve, reject) => {
-        // await refundBooking(booking.aid, booking.id)
-        //   .then(async () => {
-        //     resolve()
-        //   })
-        //   .catch(() => reject())
+        await refundBooking(booking.aid, booking.id)
+          .then(async () => {
+            resolve()
+          })
+          .catch(() => reject())
       }),
       {
         pending: 'Approve transaction...',

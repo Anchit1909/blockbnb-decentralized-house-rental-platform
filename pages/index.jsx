@@ -1,7 +1,6 @@
 import Head from 'next/head'
-import { generateFakeApartment } from '@/utils/fakeData'
-import { Category, Collection } from '@/components'
 import { getApartments } from '@/services/blockchain'
+import { Category, Collection } from '@/components'
 
 export default function Home({ apartmentsData }) {
   return (

@@ -3,8 +3,8 @@ import { useAccount } from 'wagmi'
 import { useRouter } from 'next/router'
 import { CiEdit } from 'react-icons/ci'
 import { MdDeleteOutline } from 'react-icons/md'
-import { toast } from 'react-toastify'
 import { deleteApartment } from '@/services/blockchain'
+import { toast } from 'react-toastify'
 
 const Actions = ({ apartment }) => {
   const navigate = useRouter()

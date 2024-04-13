@@ -1,18 +1,17 @@
 import Head from 'next/head'
-import { useAccount } from 'wagmi'
+import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { globalActions } from '@/store/globalSlices'
-import { generateFakeApartment, generateFakeReviews } from '@/utils/fakeData'
+import { useDispatch, useSelector } from 'react-redux'
 import { Title, ImageGrid, Description, Calendar, Actions, Review, AddReview } from '@/components'
 import {
-  getApartment,
   getReviews,
-  getQualifiedReviewers,
+  getApartment,
   getBookedDates,
   getSecurityFee,
+  getQualifiedReviewers,
 } from '@/services/blockchain'
-import { useDispatch, useSelector } from 'react-redux'
-import { useEffect } from 'react'
+import { useAccount } from 'wagmi'
 
 export default function Room({
   apartmentData,
@@ -25,9 +24,7 @@ export default function Room({
   const { roomId } = router.query
   const dispatch = useDispatch()
   const { address } = useAccount()
-  // const apartment = apartmentData
-  // const timestamps = timestampsData
-  // const reviews = reviewsData
+
   const { setApartment, setTimestamps, setReviewModal, setReviews, setSecurityFee } = globalActions
   const { apartment, timestamps, reviews } = useSelector((states) => states.globalStates)
 
