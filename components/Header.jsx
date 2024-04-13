@@ -6,12 +6,12 @@ const Header = () => {
   return (
     <header
       className="flex justify-between items-center p-4 px-8
-    sm:px-10 md:px-14 border-b-2 border-b-slate-200 w-full"
+    sm:px-10 md:px-20 border-b-2 border-b-slate-200 w-full"
     >
       <Link href={'/'}>
-        <p className="text-[#ff385c] flex items-center text-xl">
+        <p className="text-[#ff385c] flex items-center text-xl font-medium">
           <FaAirbnb className=" font-semibold" />
-          DappBnb
+          BlockBnb
         </p>
       </Link>
 

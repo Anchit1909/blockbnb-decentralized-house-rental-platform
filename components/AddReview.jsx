@@ -62,7 +62,7 @@ const AddReview = ({ roomId }) => {
               className="flex justify-center items-center rounded-full overflow-hidden
               h-10 w-40 shadow-md shadow-slate-300 p-4"
             >
-              <p className="text-lg font-bold text-slate-700"> DappBnB</p>
+              <p className="text-lg font-bold text-slate-700">BlockBnb</p>
             </div>
           </div>
 
