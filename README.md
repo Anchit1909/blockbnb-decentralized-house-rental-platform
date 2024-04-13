@@ -1,4 +1,4 @@
-  <img alt="BlockBnb - Decentralized House Rental Platform" src="/public/HomePage.png">
+<img alt="BlockBnb - Decentralized House Rental Platform" src="/public/HomePage.png">
     <h1 align="center">BlockBnb - Decentralized House Rental Platform</h1>
 
 <p align="center">
@@ -9,8 +9,8 @@
   <a href="https://twitter.com/anchit1909" target="_blank">
     <img src="https://img.shields.io/twitter/follow/anchit1909?style=flat&label=anchit1909&logo=twitter&color=0bf&logoColor=fff" alt="Anchit Sinha Twitter follower count" />
   </a>
-  <a href="https://github.com/Anchit1909/decentralized-house-rental-platform" target="_blank">
-    <img src="https://img.shields.io/github/stars/Anchit1909/decentralized-house-rental-platform?label=Anchit1909%2FBlockBnb" alt="BlockBnb repo star count" />
+  <a href="https://github.com/Anchit1909/blockbnb-decentralized-house-rental-platform" target="_blank">
+    <img src="https://img.shields.io/github/stars/Anchit1909/blockbnb-decentralized-house-rental-platform?label=Anchit1909%2FBlockBnb" alt="BlockBnb repo star count" />
   </a>
 </p>
 
