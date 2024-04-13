@@ -1,48 +1,114 @@
+  <img alt="BlockBnb - Decentralized House Rental Platform" src="/public/HomePage.png">
+    <h1 align="center">BlockBnb - Decentralized House Rental Platform</h1>
+
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/26466516/107675802-36216b80-6c77-11eb-8db1-4d3407dc53d9.png" alt="Next.js and TypeScript">
+   List, book, and review your apartments. 
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/static/v1?label=PRs&message=welcome&style=for-the-badge&color=24B36B&labelColor=000000" alt="PRs welcome!" />
-
-  <img alt="License" src="https://img.shields.io/github/license/chhpt/typescript-nextjs-starter?style=for-the-badge&color=24B36B&labelColor=000000">
-
-  <a href="https://twitter.com/intent/follow?screen_name=cwuyiqing">
-    <img src="https://img.shields.io/twitter/follow/cwuyiqing?style=for-the-badge&color=24B36B&labelColor=000000" alt="Follow @chhpt" />
+  <a href="https://twitter.com/anchit1909" target="_blank">
+    <img src="https://img.shields.io/twitter/follow/anchit1909?style=flat&label=anchit1909&logo=twitter&color=0bf&logoColor=fff" alt="Anchit Sinha Twitter follower count" />
+  </a>
+  <a href="https://github.com/Anchit1909/decentralized-house-rental-platform" target="_blank">
+    <img src="https://img.shields.io/github/stars/Anchit1909/decentralized-house-rental-platform?label=Anchit1909%2FBlockBnb" alt="BlockBnb repo star count" />
   </a>
 </p>
 
-<br>
+<p align="center">
+  <a href="#introduction"><strong>Introduction</strong></a> ·
+  <a href="#features"><strong>Features</strong></a> ·
+  <a href="#tech-stack"><strong>Tech Stack</strong></a> ·
+  <a href="#screenshots"><strong>Screenshots</strong></a> ·
+  <a href="#running-locally"><strong>Running Locally</strong></a> ·
+  <a href="#author"><strong>Author</strong></a>
+</p>
+<br/>
 
+## Introduction
 
-# Hardhat-Tailwind-NextJs Ethers Starter Kit
-Speedily develope your decentralized application with this NextJs starter kit for free. It has Redux-Toolkit, NextJs 13, React 18, Hardhat, EthersJs, Tailwind, etc.
+BlockBnb is a decentralized application built on the Ethereum blockchain. It is a rental marketplace where users can list, book, and review apartments. The project revolves around `DappBnb.sol`, a Solidity-written Ethereum smart contract. It leverages the OpenZeppelin library to ensure secure and standardized development of the contract.
 
-Follow the steps below to download, install, and run this project.
+The core of the contract is defined by three primary structures: `ApartmentStruct`, `BookingStruct`, and `ReviewStruct`, representing an apartment, a booking, and a review, respectively.
 
-## Dependencies
-Install these prerequisites to follow along with the tutorial. See free video tutorial or a full explanation of each prerequisite.
-- NPM: https://nodejs.org
-- Hardhat: https://hardhat.org/
-- EthersJs: https://ethers.org/
-- Tailwind CSS: https://tailwindcss.com/
+## Features
 
+- `createAppartment`: Allows a user to create a new apartment listing.
+- `updateAppartment`: Allows the apartment owner to update the details of an apartment.
+- `deleteAppartment`: Allows the apartment owner to delete an apartment listing.
+- `getApartments`: Allows a user to fetch all available apartments.
+- `getApartment`: Allows a user to fetch the details of a specific apartment.
+- `bookApartment`: Allows a user to book an apartment for specific dates.
+- `checkInApartment`: Allows a tenant to check into an apartment and triggers the payment process.
+- `claimFunds`: Allows the apartment owner to claim funds after a booking is completed.
+- `refundBooking`: Allows a tenant to cancel a booking and get a refund.
+- `getUnavailableDates`: Allows a user to fetch all booked dates for a specific apartment.
+- `getBookings`: Allows a user to fetch all bookings for a specific apartment.
+- `getBooking`: Allows a user to fetch the details of a specific booking.
+- `addReview`: Allows a tenant to add a review for an apartment.
+- `getReviews`: Allows a user to fetch all reviews for a specific apartment.
 
-## Step 1. Clone the project
-`git clone https://github.com/Daltonic/hardhat_ethersjs_next_starter_app <PROJECT NAME>`
+## Tech Stack
 
-## Step 2. Install dependencies
+- Javascript
+- [Solidity](https://soliditylang.org/)
+- [NextJS](https://nextjs.org/)
+- [Hardhat](https://hardhat.org/)
+- [Alchemy](https://dashboard.alchemy.com/)
+- [EthersJs](https://docs.ethers.io/v5/)
+- [Redux-Toolkit](https://redux-toolkit.js.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+## Screenshots
+
+### Home Page
+
+<img alt="Home Page" src="/public/HomePage.png">
+
+### Room Page
+
+<img alt="Room Page" src="/public/RoomPage.png">
+
+### Edit Room Page
+
+<img alt="Edit Room Page" src="/public/EditRoomPage.png">
+
+### Add Room Page
+
+<img alt="Add Room Page" src="/public/AddRoomPage.png">
+
+### Bookings Page
+
+<img alt="Bookings Page" src="/public/BookingsPage.png">
+
+### Add Review
+
+<img alt="Add Review" src="/public/AddReview.png">
+
+## Running Locally
+
+Supply the following keys in your `.env` variable:
+
 ```sh
-$ cd <PROJECT NAME>
-$ yarn install # or npm install
-```
-## Step 3. Start Hardhat Node
-Open the terminal and run the command below.
-```sh
-$ yarn hardhat node
+NEXT_PUBLIC_RPC_URL=http://127.0.0.1:8545
+NEXT_PUBLIC_ALCHEMY_ID=<YOUR_ALCHEMY_PROJECT_ID>
+NEXT_PUBLIC_PROJECT_ID=<WALLET_CONNECT_PROJECT_ID>
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=somereallysecretsecret
 ```
 
-## Step 4. Run the Front End Application
-`$ yarn dev`
-Visit this URL in your browser: http://localhost:3000
+`YOUR_ALCHEMY_PROJECT_ID`: [Get Key Here](https://dashboard.alchemy.com/)
+`WALLET_CONNECT_PROJECT_ID`: [Get Key Here](https://cloud.walletconnect.com/sign-in)
 
+Follow these steps to run the application:
+
+1. Install the package modules by running the command: `yarn install`
+2. Start the Hardhat server: `yarn blockchain`
+3. Run the contract deployment script: `yarn deploy`
+4. Run the contract seeding script: `yarn seed`
+5. Spin up the Next.js development server: `yarn dev`
+
+Now, your application should be up and running.
+
+## Author
+
+- Anchit Sinha ([@anchit1909](https://twitter.com/anchit1909))
