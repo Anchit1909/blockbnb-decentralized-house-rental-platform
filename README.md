@@ -30,6 +30,8 @@ BlockBnb is a decentralized application built on the Ethereum blockchain. It is 
 
 The core of the contract is defined by three primary structures: `ApartmentStruct`, `BookingStruct`, and `ReviewStruct`, representing an apartment, a booking, and a review, respectively.
 
+<img alt="Architecture" src="/public/Architecture.png">
+
 ## Features
 
 - `createAppartment`: Allows a user to create a new apartment listing.
